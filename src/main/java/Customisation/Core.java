@@ -1,0 +1,5 @@
+package Customisation;
+
+public enum Core {
+    PHOENIX_FEATHER, DRAGON_HEARTSTRING, UNICORN_TAIL_HAIR, BASILISK_HORN
+}

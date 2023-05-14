@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="704.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projet_rpg_javafx.BattleLvl2Controller">
+   <children>
+      <ImageView fitHeight="396.0" fitWidth="902.0" layoutX="-1.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../images/secretroom.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="900.0" layoutY="554.0" nodeOrientation="INHERIT" pickOnBounds="true">
+         <image>
+            <Image url="@../../../images/bordure.png" />
+         </image>
+      </ImageView>
+      <HBox layoutX="66.0" layoutY="577.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="103.0" prefWidth="769.0">
+         <children>
+            <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="102.0" prefWidth="384.0">
+               <children>
+                  <AnchorPane prefHeight="74.0" prefWidth="191.0">
+                     <children>
+                        <Button layoutX="84.0" layoutY="5.0" mnemonicParsing="false" onAction="#attack" prefHeight="40.0" prefWidth="250.0" text="Attack" textFill="RED">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Text layoutX="57.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1)">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="76.0" prefWidth="191.0">
+                     <children>
+                        <Button layoutX="85.0" layoutY="6.0" mnemonicParsing="false" onAction="#defend" prefHeight="40.0" prefWidth="250.0" text="Defend" textFill="#0f02ff">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Text layoutX="56.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2)">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <VBox alignment="TOP_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="102.0" prefWidth="384.0">
+               <children>
+                  <AnchorPane prefHeight="149.0" prefWidth="190.0">
+                     <children>
+                        <Button layoutX="84.0" layoutY="4.0" mnemonicParsing="false" onAction="#castASpell" prefHeight="40.0" prefWidth="250.0" text="Cast a spell" textFill="#ea00ff">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Text layoutX="58.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3)">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="158.0" prefWidth="190.0">
+                     <children>
+                        <Button layoutX="86.0" layoutY="8.0" mnemonicParsing="false" onAction="#usePotion" prefHeight="40.0" prefWidth="250.0" text="Use a potion" textFill="#00ff5e">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Text layoutX="57.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4)">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <AnchorPane layoutX="-1.0" layoutY="395.0" prefHeight="161.0" prefWidth="900.0">
+         <children>
+            <ImageView fitHeight="165.0" fitWidth="900.0" layoutX="1.0" layoutY="-2.0" nodeOrientation="INHERIT" pickOnBounds="true">
+               <image>
+                  <Image url="@../../../images/bordure.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="70.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="762.4000488281251">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text fx:id="spellQuestion" layoutX="70.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You are facing the terrible basilisk. If you are from Griffondor, you can call upon the legendary sword of Godric Gryffindor's legendary sword to strike him down. Otherwise, you'll have to rip out one of its fangs and use it to destroy Tom Jedusor's diary." textAlignment="CENTER" wrappingWidth="762.4000488281251">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Button fx:id="spellButton1" layoutX="77.0" layoutY="55.0" mnemonicParsing="false" onAction="#wingardiumLeviosa" prefHeight="37.0" prefWidth="200.0" text="Wingardium Leviosa" textAlignment="CENTER" textFill="#006cff">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="spellButton2" layoutX="351.0" layoutY="54.0" mnemonicParsing="false" onAction="#accio" prefHeight="37.0" prefWidth="200.0" text="Accio" textAlignment="CENTER" textFill="#00ff4b">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="spellButton3" layoutX="632.0" layoutY="54.0" mnemonicParsing="false" onAction="#expelliarmus" prefHeight="37.0" prefWidth="200.0" text="Expelliarmus" textAlignment="CENTER" textFill="RED">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="spellButton4" layoutX="77.0" layoutY="97.0" mnemonicParsing="false" onAction="#expectroPatronum" prefHeight="38.0" prefWidth="200.0" text="Expecto Patronum" textAlignment="CENTER" textFill="#ff9e00">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="spellButton5" layoutX="351.0" layoutY="97.0" mnemonicParsing="false" onAction="#sectumsempra" prefHeight="38.0" prefWidth="200.0" text="Sectumsempra" textAlignment="CENTER" textFill="#ff00ee">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="spellButton6" layoutX="632.0" layoutY="97.0" mnemonicParsing="false" onAction="#avadaKedabra" prefHeight="37.0" prefWidth="200.0" text="Avada Kedabra" textAlignment="CENTER" textFill="#ff00ee">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <ImageView fx:id="characterImageView" fitHeight="150.0" fitWidth="200.0" layoutX="128.0" layoutY="232.0" pickOnBounds="true" preserveRatio="true" />
+      <AnchorPane layoutX="455.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="140.0" prefWidth="440.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="448.0" layoutX="-1.0" layoutY="-5.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../../images/bordure.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="35.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Basilisk">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <ProgressBar fx:id="hpBar" layoutX="34.0" layoutY="48.0" prefHeight="31.0" prefWidth="378.0" progress="1.0" />
+            <Text fx:id="currentHpBar" layoutX="47.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="83.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="/ 100">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="7.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="140.0" prefWidth="440.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="448.0" layoutX="-2.0" layoutY="-5.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../../images/bordure.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="nameLabel" layoutX="34.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="378.4">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <ProgressBar layoutX="33.0" layoutY="48.0" prefHeight="31.0" prefWidth="378.0" progress="1.0" />
+            <Text fx:id="hpCurrent" layoutX="48.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="84.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="/ 100">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="211.0" fitWidth="301.0" layoutX="525.0" layoutY="174.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/basilisk.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,11 @@
+.previous-button {
+    -fx-shape : "M150 0 L75 200 L225 200 Z";
+    -fx-background-color : #FFFFFF;
+}
+
+.next-button {
+    -fx-shape : "M150 0 L75 200 L225 200 Z";
+    -fx-background-color : #FFFFFF;
+}
+
+/* Path: src\main\resources\com\example\projet_rpg_javafx\style.css */
