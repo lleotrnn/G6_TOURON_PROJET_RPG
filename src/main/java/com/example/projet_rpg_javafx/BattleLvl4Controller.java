@@ -30,7 +30,13 @@ public class BattleLvl4Controller {
     private Text currentHpBar;
 
     @FXML
+    private Text currentHpBarPlayer;
+
+    @FXML
     private ProgressBar hpBar;
+
+    @FXML
+    private ProgressBar hpBarPlayer;
 
     @FXML
     private Text nameLabel;
@@ -94,13 +100,21 @@ public class BattleLvl4Controller {
     @FXML
     void attack(ActionEvent event) throws IOException {
         double currentHp = hpBar.getProgress();
+        double currentHpPlayer = hpBarPlayer.getProgress();
         currentHp -= 0.05;
+        currentHpPlayer -= 0.45;
         if (currentHp <= 0) {
             currentHp = 0;
         }
+        if (currentHpPlayer <= 0) {
+            currentHpPlayer = 0;
+        }
         hpBar.setProgress(currentHp);
-        currentHpBar.setText(String.format("%d", (int) (currentHp * 100)));
+        currentHpBar.setText(String.format("%d", (int) (currentHp * 330)));
+        hpBarPlayer.setProgress(currentHpPlayer);
+        currentHpBarPlayer.setText(String.format("%d", (int) (currentHpPlayer * 100)));
         showPopup();
+        showPopupGameOver();
     }
 
 
@@ -116,91 +130,160 @@ public class BattleLvl4Controller {
 
 
     @FXML
-    void defend(ActionEvent event) {
-        double currentHp = hpBar.getProgress();
-        currentHp -= 0.02;
-        if (currentHp <= 0) {
-            currentHp = 0;
+    void defend(ActionEvent event) throws IOException {
+        double currentHpPlayer = hpBarPlayer.getProgress();
+        currentHpPlayer -= 0.05;
+        if (currentHpPlayer <= 0) {
+            currentHpPlayer = 0;
         }
-        hpBar.setProgress(currentHp);
-        currentHpBar.setText(String.format("%d", (int) (currentHp * 100)));
+        hpBarPlayer.setProgress(currentHpPlayer);
+        currentHpBarPlayer.setText(String.format("%d", (int) (currentHpPlayer * 100)));
+        showPopupGameOver();
     }
 
     @FXML
     void usePotion(ActionEvent event) {
-
+        double currentHpPlayer = hpBarPlayer.getProgress();
+        currentHpPlayer += 0.5;
+        if (currentHpPlayer >= 1) {
+            currentHpPlayer = 1;
+        }
+        hpBarPlayer.setProgress(currentHpPlayer);
+        currentHpBarPlayer.setText(String.format("%d", (int) (currentHpPlayer * 100)));
     }
 
     @FXML
     void wingardiumLeviosa(ActionEvent event) throws IOException {
         double currentHp = hpBar.getProgress();
+        double currentHpPlayer = hpBarPlayer.getProgress();
         currentHp -= 0.4;
+        currentHpPlayer -= 0.45;
         if (currentHp <= 0) {
             currentHp = 0;
         }
+        if (currentHpPlayer <= 0) {
+            currentHpPlayer = 0;
+        }
         hpBar.setProgress(currentHp);
-        currentHpBar.setText(String.format("%d", (int) (currentHp * 100)));
+        currentHpBar.setText(String.format("%d", (int) (currentHp * 330)));
+        hpBarPlayer.setProgress(currentHpPlayer);
+        currentHpBarPlayer.setText(String.format("%d", (int) (currentHpPlayer * 100)));
         showPopup();
+        showPopupGameOver();
     }
 
     @FXML
     void accio(ActionEvent event) throws IOException {
         double currentHp = hpBar.getProgress();
+        double currentHpPlayer = hpBarPlayer.getProgress();
         currentHp -= 0.2;
+        currentHpPlayer -= 0.45;
         if (currentHp <= 0) {
             currentHp = 0;
         }
+        if (currentHpPlayer <= 0) {
+            currentHpPlayer = 0;
+        }
         hpBar.setProgress(currentHp);
-        currentHpBar.setText(String.format("%d", (int) (currentHp * 100)));
+        currentHpBar.setText(String.format("%d", (int) (currentHp * 330)));
+        hpBarPlayer.setProgress(currentHpPlayer);
+        currentHpBarPlayer.setText(String.format("%d", (int) (currentHpPlayer * 100)));
         showPopup();
+        showPopupGameOver();
     }
 
     @FXML
     void expelliarmus(ActionEvent event) throws IOException {
         double currentHp = hpBar.getProgress();
+        double currentHpPlayer = hpBarPlayer.getProgress();
         currentHp -= 0.3;
+        currentHpPlayer -= 0.45;
         if (currentHp <= 0) {
             currentHp = 0;
         }
+        if (currentHpPlayer <= 0) {
+            currentHpPlayer = 0;
+        }
         hpBar.setProgress(currentHp);
-        currentHpBar.setText(String.format("%d", (int) (currentHp * 100)));
+        currentHpBar.setText(String.format("%d", (int) (currentHp * 330)));
+        hpBarPlayer.setProgress(currentHpPlayer);
+        currentHpBarPlayer.setText(String.format("%d", (int) (currentHpPlayer * 100)));
         showPopup();
+        showPopupGameOver();
     }
 
     @FXML
     void expectroPatronum(ActionEvent event) throws IOException {
         double currentHp = hpBar.getProgress();
+        double currentHpPlayer = hpBarPlayer.getProgress();
         currentHp -= 0.5;
+        currentHpPlayer -= 0.45;
         if (currentHp <= 0) {
             currentHp = 0;
         }
+        if (currentHpPlayer <= 0) {
+            currentHpPlayer = 0;
+        }
         hpBar.setProgress(currentHp);
-        currentHpBar.setText(String.format("%d", (int) (currentHp * 100)));
+        currentHpBar.setText(String.format("%d", (int) (currentHp * 330)));
+        hpBarPlayer.setProgress(currentHpPlayer);
+        currentHpBarPlayer.setText(String.format("%d", (int) (currentHpPlayer * 100)));
         showPopup();
+        showPopupGameOver();
     }
 
     @FXML
     void sectumsempra(ActionEvent event) throws IOException {
         double currentHp = hpBar.getProgress();
+        double currentHpPlayer = hpBarPlayer.getProgress();
         currentHp -= 0.6;
+        currentHpPlayer -= 0.45;
         if (currentHp <= 0) {
             currentHp = 0;
         }
+        if (currentHpPlayer <= 0) {
+            currentHpPlayer = 0;
+        }
         hpBar.setProgress(currentHp);
-        currentHpBar.setText(String.format("%d", (int) (currentHp * 100)));
+        currentHpBar.setText(String.format("%d", (int) (currentHp * 330)));
+        hpBarPlayer.setProgress(currentHpPlayer);
+        currentHpBarPlayer.setText(String.format("%d", (int) (currentHpPlayer * 100)));
         showPopup();
+        showPopupGameOver();
     }
 
     @FXML
     void avadaKedabra(ActionEvent event) throws IOException {
         double currentHp = hpBar.getProgress();
+        double currentHpPlayer = hpBarPlayer.getProgress();
         currentHp -= 4;
+        currentHpPlayer -= 0.45;
         if (currentHp <= 0) {
             currentHp = 0;
         }
         hpBar.setProgress(currentHp);
-        currentHpBar.setText(String.format("%d", (int) (currentHp * 100)));
+        currentHpBar.setText(String.format("%d", (int) (currentHp * 330)));
+        hpBarPlayer.setProgress(currentHpPlayer);
+        currentHpBarPlayer.setText(String.format("%d", (int) (currentHpPlayer * 100)));
         showPopup();
+        showPopupGameOver();
+    }
+
+    void showPopupGameOver() throws IOException {
+        if (hpBarPlayer.getProgress() == 0) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("GAME OVER");
+            alert.setHeaderText("GAME OVER!");
+
+            ButtonType okButton = new ButtonType("OK", ButtonBar.ButtonData.OK_DONE);
+            alert.getButtonTypes().setAll(okButton);
+
+            Optional<ButtonType> result = alert.showAndWait();
+            if (result.isPresent() && result.get() == okButton) {
+                Stage stage7 = (Stage) hpBarPlayer.getScene().getWindow();
+                stage7.close();
+            }
+        }
     }
 
 
@@ -220,14 +303,14 @@ public class BattleLvl4Controller {
                     FXMLLoader battleLvl5ControllerLoader = new FXMLLoader(HelloApplication.class.getResource("battle5.fxml"));
                     BattleLvl5Controller battle = new BattleLvl5Controller(characterImageView.getImage(), username);
                     battleLvl5ControllerLoader.setControllerFactory(param -> battle);
-                    Scene scene7 = new Scene(battleLvl5ControllerLoader.load());
-                    Stage stage7 = new Stage();
-                    stage7.setTitle("LEVEL 5 - THE ORDER OF THE PHENIX");
-                    stage7.setScene(scene7);
-                    stage7.show();
+                    Scene scene8 = new Scene(battleLvl5ControllerLoader.load());
+                    Stage stage8 = new Stage();
+                    stage8.setTitle("LEVEL 5 - THE ORDER OF THE PHENIX");
+                    stage8.setScene(scene8);
+                    stage8.show();
 
-                    Stage stage6 = (Stage) hpBar.getScene().getWindow();
-                    stage6.close();
+                    Stage stage7 = (Stage) hpBar.getScene().getWindow();
+                    stage7.close();
 
                 } catch (IOException e) {
                     e.printStackTrace();

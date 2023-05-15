@@ -152,12 +152,12 @@
                </font>
             </Text>
             <ProgressBar fx:id="hpBar" layoutX="34.0" layoutY="48.0" prefHeight="31.0" prefWidth="378.0" progress="1.0" />
-            <Text fx:id="currentHpBar" layoutX="47.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100">
+            <Text fx:id="currentHpBar" layoutX="47.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="250">
                <font>
                   <Font size="18.0" />
                </font>
             </Text>
-            <Text layoutX="83.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="/ 100">
+            <Text layoutX="83.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="/ 250">
                <font>
                   <Font size="18.0" />
                </font>
@@ -176,8 +176,8 @@
                   <Font size="18.0" />
                </font>
             </Text>
-            <ProgressBar layoutX="33.0" layoutY="48.0" prefHeight="31.0" prefWidth="378.0" progress="1.0" />
-            <Text fx:id="hpCurrent" layoutX="48.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100">
+            <ProgressBar fx:id="hpBarPlayer" layoutX="33.0" layoutY="48.0" prefHeight="31.0" prefWidth="378.0" progress="1.0" />
+            <Text fx:id="currentHpBarPlayer" layoutX="48.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100">
                <font>
                   <Font size="18.0" />
                </font>
