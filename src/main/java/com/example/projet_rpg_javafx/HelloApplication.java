@@ -10,9 +10,12 @@ import java.io.IOException;
 public class HelloApplication extends Application {
 
     // ======== IMPORTANT ========
+
     // Lorsque vous voulez run le code, il faut changer la configuration.
     // Select Run/Debug Configuration -> Current File
+
     // ======== IMPORTANT ========
+
 
     // Inspiré de Pokemon pour le système de combat
 
